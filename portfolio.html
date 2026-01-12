@@ -1,0 +1,111 @@
+<!-- ==================== PORTFOLIO.HTML ==================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Architect Name</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">ARCHITECT NAME</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portfolio Header -->
+    <section class="page-header">
+        <h1>Portfolio</h1>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="filter-section">
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="residential">Residential</button>
+            <button class="category-btn" data-category="commercial">Commercial</button>
+            <button class="category-btn" data-category="public">Public Spaces</button>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="portfolio-section">
+        <div class="projects-grid">
+            <div class="project-card" data-category="residential">
+                <a href="project-modern-villa.html">
+                    <img src="images/projects/modern-villa/thumb.jpg" alt="Modern Villa">
+                    <div class="project-info">
+                        <h3>Modern Villa</h3>
+                        <p>Residential • 2024</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="commercial">
+                <a href="project-office-complex.html">
+                    <img src="images/projects/office-complex/thumb.jpg" alt="Office Complex">
+                    <div class="project-info">
+                        <h3>Office Complex</h3>
+                        <p>Commercial • 2023</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="public">
+                <a href="project-cultural-center.html">
+                    <img src="images/projects/cultural-center/thumb.jpg" alt="Cultural Center">
+                    <div class="project-info">
+                        <h3>Cultural Center</h3>
+                        <p>Public Spaces • 2023</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="residential">
+                <a href="project-urban-apartment.html">
+                    <img src="images/projects/urban-apartment/thumb.jpg" alt="Urban Apartment">
+                    <div class="project-info">
+                        <h3>Urban Apartment</h3>
+                        <p>Residential • 2024</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="commercial">
+                <a href="project-retail-space.html">
+                    <img src="images/projects/retail-space/thumb.jpg" alt="Retail Space">
+                    <div class="project-info">
+                        <h3>Retail Space</h3>
+                        <p>Commercial • 2022</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card" data-category="public">
+                <a href="project-park-pavilion.html">
+                    <img src="images/projects/park-pavilion/thumb.jpg" alt="Park Pavilion">
+                    <div class="project-info">
+                        <h3>Park Pavilion</h3>
+                        <p>Public Spaces • 2022</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Architect Name. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
