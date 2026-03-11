@@ -66,27 +66,92 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ==================== GALLERY LIGHTBOX ==================== */
 
-    const images = document.querySelectorAll(".project-gallery img");
+const images = document.querySelectorAll(".project-gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const lightboxCaption = document.getElementById("lightbox-caption");
 
-images.forEach(img => {
+const prevBtn = document.getElementById("lightbox-prev");
+const nextBtn = document.getElementById("lightbox-next");
+
+let currentIndex = 0;
+
+function showImage(index) {
+
+    const img = images[index];
+    const caption = img.parentElement.querySelector("figcaption").innerText;
+
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = caption;
+}
+
+images.forEach((img, index) => {
 
     img.addEventListener("click", () => {
 
-        const caption = img.parentElement.querySelector("figcaption").innerText;
+        currentIndex = index;
 
         lightbox.classList.add("show");
-        lightboxImg.src = img.src;
-        lightboxCaption.textContent = caption;
+        showImage(currentIndex);
 
     });
 
 });
 
+
+prevBtn.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    currentIndex--;
+
+    if(currentIndex < 0){
+        currentIndex = images.length - 1;
+    }
+
+    showImage(currentIndex);
+
+});
+
+
+nextBtn.addEventListener("click", (e) => {
+
+    e.stopPropagation();
+
+    currentIndex++;
+
+    if(currentIndex >= images.length){
+        currentIndex = 0;
+    }
+
+    showImage(currentIndex);
+
+});
+
+
 lightbox.addEventListener("click", () => {
+
     lightbox.classList.remove("show");
+
+});
+
+
+document.addEventListener("keydown", (e) => {
+
+    if(!lightbox.classList.contains("show")) return;
+
+    if(e.key === "ArrowRight"){
+        nextBtn.click();
+    }
+
+    if(e.key === "ArrowLeft"){
+        prevBtn.click();
+    }
+
+    if(e.key === "Escape"){
+        lightbox.classList.remove("show");
+    }
+
 });
 
 });
