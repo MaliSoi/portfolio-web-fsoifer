@@ -126,8 +126,7 @@ section {
 
 .featured, .about-section, .services, .filter-section, .portfolio-section, .project-content, .contact-section {
     max-width: 1400px;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
 
 
@@ -322,12 +321,25 @@ margin-top:0.4rem;
     line-height: 1.8;
 }
 
+.about-block {
+  margin-bottom: 40px;
+}
+
+.about-block h2 {
+  margin-bottom: 16px;
+}
+
+.about-block p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
 
 
 /* Category Filter */
 .filter-section {
     padding: 3rem 0;
-    background: #f5f5f5;
     margin: 0 auto;
 }
 
@@ -341,7 +353,7 @@ margin-top:0.4rem;
     justify-content:center;
     flex-wrap:wrap;
     gap:1rem;
-
+    
     max-width:1400px;
     margin:0 auto;
 }
@@ -616,6 +628,49 @@ text-transform:uppercase;
 
 .contact-form button:hover {
     background: #555;
+}
+
+.contact-section {
+  padding: 160px 20px;
+}
+
+.contact-centered {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-centered h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.contact-intro {
+  color: #777;
+  margin-bottom: 50px;
+}
+
+/* Links grandes, elegantes */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-links a,
+.contact-links span {
+  font-size: 18px;
+  text-decoration: none;
+  color: #222;
+}
+
+.contact-links a:hover {
+  opacity: 0.6;
+}
+
+/* jerarquía clara */
+.contact-links a:first-child {
+  font-size: 24px;
 }
 
 /* Footer */
