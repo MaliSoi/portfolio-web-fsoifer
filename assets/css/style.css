@@ -111,9 +111,9 @@ nav a:hover, nav a.active {
 .project-hero {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 3; /* 🔥 adaptable */
+    height: 300px;
     overflow: hidden;
-    margin: 2rem 0 3rem;
+   margin: 0.5rem 0 1.5rem;
 }
 
 .project-hero::after {
@@ -146,7 +146,7 @@ nav a:hover, nav a.active {
 
 /* Sections */
 section {
-    padding: 6rem 5%;
+    padding: 1rem 5%;
 }
 
 .featured, .about-section, .services, .filter-section, .portfolio-section, .project-content, .contact-section {
@@ -233,6 +233,10 @@ margin-top:0.4rem;
     font-size:0.9rem;
     text-align:center;
     opacity:0.85;
+}
+
+figcaption {
+    display: none;
 }
 
 .lightbox-prev,
@@ -464,7 +468,7 @@ margin-top:0.4rem;
 
 /* Project Page */
 .project-header {
-    padding: 8rem 5% 3rem;
+    padding: 2rem 5% 3rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -485,13 +489,14 @@ margin-top:0.4rem;
     font-size: 3rem;
     font-weight: 300;
     letter-spacing: 2px;
-    margin: 1rem 0;
+    margin: 0rem 0;
 }
 
 .project-meta {
     color: #666;
     font-size: 0.95rem;
     letter-spacing: 1px;
+    margin-bottom: 0.3rem;
 }
 
 .project-meta span {
@@ -500,17 +505,17 @@ margin-top:0.4rem;
 
 .project-description {
     max-width: 900px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2rem;
 }
 
 .project-description h2 {
     text-align: left;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .project-description p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.8;
 }
 
