@@ -1,0 +1,70 @@
+body.intro {
+  margin: 0;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* SLIDES */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1.2s ease, transform 6s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 5%;
+}
+
+.hero-content h1 {
+  font-size: 3.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+/* BOTÓN */
+.cta-button {
+  padding: 0.9rem 2.5rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: rgba(255,255,255,0.3);
+}
