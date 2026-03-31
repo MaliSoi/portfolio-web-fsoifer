@@ -63,24 +63,24 @@ nav a:hover, nav a.active {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.30)), 
                 url('../images/hero/06140257_MFAVA83-Mosaici1.1.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    text-align: center;
+    text-align:center;
     padding-top: 6rem;
     
 
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 300;
     letter-spacing: 4px;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     text-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
@@ -102,6 +102,7 @@ nav a:hover, nav a.active {
     color: white;
     border: none;
     transition: all 0.3s ease;
+    border-radius: 999px
 }
 
 .cta-button:hover {
@@ -714,7 +715,7 @@ text-transform:uppercase;
 /* Footer */
 .site-footer {
   background: #222;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   
 }
 
@@ -727,7 +728,7 @@ text-transform:uppercase;
 
 /* Logo */
 .footer-logo {
-  height: 55px;
+  height: 45px;
   width: auto;
   display: flex;
   
@@ -775,7 +776,7 @@ text-transform:uppercase;
 
 /* Copyright centered */
 .footer-bottom {
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   text-align: center;
   font-size: 0.8rem;
   font-weight: 300;
