@@ -51,10 +51,6 @@ nav {
   box-shadow: none; /* clave */
 }
 
-.home .nav {
-  background: transparent;
-  color: white;
-}
 
 nav.scrolled {
   background: white;

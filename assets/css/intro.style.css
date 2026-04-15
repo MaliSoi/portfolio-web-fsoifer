@@ -1,60 +1,102 @@
-body.intro {
-  margin: 0;
+/* NAV SOLO PARA INTRO */
+body.intro nav {
+  background: transparent;
+  box-shadow: none;
+  position: absolute; 
+  top: 0;
+  width: 100%;
+  padding: 25px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* LINKS */
+body.intro nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+body.intro-nav-links a:hover {
+  opacity: 1;
 }
 
 /* HERO */
-.hero {
+
+body.intro .hero  {
   height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position: relative; /* needed for slideshow layers */
+    color: white;
+    text-align: left;
+    padding-top: 6rem;
+    overflow: hidden; /* keeps images clipped inside */
 }
 
 /* SLIDES */
-.hero-slide {
+body.intro .hero-slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 1.2s ease, transform 6s ease;
+  transform: scale(1);
+  transition: opacity 1.5s ease;
 }
 
-.hero-slide.active {
+body.intro .hero-slide.active {
   opacity: 1;
   transform: scale(1);
 }
 
 /* OVERLAY */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
+body.intro .hero-overlay {
+   position: absolute;
+    inset: 0;
+    background:  linear-gradient(
+  to bottom,
+  rgba(0,0,0,0.5),
+  rgba(0,0,0,0.2)
+);
+    z-index: 1;
 }
 
 /* CONTENT */
-.hero-content {
+body.intro .hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 700px;
-  padding: 0 5%;
+    z-index: 2;
+    text-align: left;
+  max-width: 800px;
+  padding-left: 5%;
 }
 
-.hero-content h1 {
-  font-size: 3.4rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  line-height: 1.2;
-  margin-bottom: 2rem;
+body.intro .hero-content h1 {
+  font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
+
+body.intro .hero-content p {
+  font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+
 
 /* BOTÓN */
-.cta-button {
+body.intro .cta-button {
   padding: 0.9rem 2.5rem;
   border-radius: 999px;
   background: rgba(255,255,255,0.15);
@@ -68,3 +110,8 @@ body.intro {
 .cta-button:hover {
   background: rgba(255,255,255,0.3);
 }
+
+body.intro .logo img {
+  height: 50px;
+}
+
