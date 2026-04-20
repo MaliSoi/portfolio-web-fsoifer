@@ -124,7 +124,7 @@ body.intro .hero-content p {
 /* BOTÓN */
 body.intro .cta-button {
   padding: 0.9rem 2.5rem;
-  border-radius: 999px;
+  border-radius: none;
   background: rgba(255,255,255,0.15);
   color: white;
   border: 1px solid rgba(255,255,255,0.3);
