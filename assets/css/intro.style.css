@@ -1,30 +1,56 @@
 /* NAV SOLO PARA INTRO */
 body.intro nav {
-  background: transparent;
-  box-shadow: none;
-  position: absolute; 
+  position: absolute;
   top: 0;
   width: 100%;
   padding: 25px 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 👇 gradiente suave, sin corte */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0)
+  );
+
+  /* 👇 importante */
+  box-shadow: none;
+  border: none;
+}
+
+/* CONTENEDOR */
+
+.nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 9999;
 }
 
 /* LINKS */
-body.intro nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  margin-left: 30px;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  opacity: 0.8;
-  transition: 0.3s;
+body.intro .nav-links {
+  display: flex;
+  gap: 30px;
 }
 
-body.intro-nav-links a:hover {
-  opacity: 1;
+body.intro .nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+/* HOVER SIMPLE */
+body.intro .nav-links a:hover {
+  color: white;
 }
 
 /* HERO */
@@ -112,6 +138,11 @@ body.intro .cta-button {
 }
 
 body.intro .logo img {
-  height: 50px;
+  height: 60px;
+  filter: brightness(1.2) contrast(1.1);
+  opacity: 0.95;
+
 }
+
+
 
