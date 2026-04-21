@@ -548,8 +548,9 @@ figcaption {
 }
 
 /* Project Page */
+
 .project-header {
-    padding: 100px 5% 3rem; 
+  padding: 20px 5% 3rem; 
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -574,14 +575,20 @@ figcaption {
 }
 
 .project-meta {
-    color: #666;
-    font-size: 0.95rem;
-    letter-spacing: 1px;
-    margin-bottom: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 0.3rem;
+  opacity: 0.7;
 }
 
 .project-meta span {
-    margin: 0 0.5rem;
+  margin: 0; /* 👈 importante */
 }
 
 .project-description {
