@@ -44,6 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.addEventListener("click", (e) => {
+
+  const isClickInsideNav = e.target.closest(".nav");
+  const isMenuOpen = navLinks.classList.contains("show");
+
+  if (!isClickInsideNav && isMenuOpen) {
+    navLinks.classList.remove("show");
+  }
+
+});
+
   /* ==================== LIGHTBOX ==================== */
   const images = document.querySelectorAll(".project-gallery img");
   const lightbox = document.getElementById("lightbox");
