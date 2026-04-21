@@ -144,5 +144,63 @@ body.intro .logo img {
 
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* MOBILE MENU SOLO PARA INTRO */
+@media (max-width: 768px) {
+
+   .menu-toggle {
+    display: block;
+  }
+
+  body.intro .nav-links {
+    display: none;
+  }
+
+  body.intro .nav-links.show {
+    display: flex;
+  }
+
+  body.intro .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px 0;
+
+    /* 👇 clave: NO blanco */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+
+    /* oculto por defecto */
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+  }
+
+  body.intro .nav-links.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+   body.intro .nav-links.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+}
 
 
