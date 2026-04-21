@@ -55,6 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
   /* ==================== LIGHTBOX ==================== */
   const images = document.querySelectorAll(".project-gallery img");
   const lightbox = document.getElementById("lightbox");

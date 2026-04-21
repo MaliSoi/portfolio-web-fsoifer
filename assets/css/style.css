@@ -13,6 +13,10 @@ body {
     background: #fff;
 }
 
+body:not(.intro) {
+  padding-top: 80px;
+}
+
 /* Navigation */
 
 nav {
@@ -545,9 +549,9 @@ figcaption {
 
 /* Project Page */
 .project-header {
-    padding: 2rem 5% 3rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 100px 5% 3rem; 
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .project-breadcrumb a {
