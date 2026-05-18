@@ -3,7 +3,7 @@ body.intro nav {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 25px 5%;
+  padding: 2rem 5%;
 
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ body.intro nav {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,13 +37,13 @@ body.intro nav {
 /* LINKS */
 body.intro .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 2.5rem;
 }
 
 body.intro .nav-links a {
   color: rgba(255,255,255,0.7);
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 2px;
   transition: color 0.3s ease;
 }
