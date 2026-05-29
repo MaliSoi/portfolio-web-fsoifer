@@ -35,6 +35,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 /* nav normal (resto del sitio) */
@@ -46,6 +47,7 @@ nav {
   z-index: 100;
   transition: all 0.3s ease;
   padding: 2rem 5%;
+  
 }
 
 /* nav transparente SOLO en home */
@@ -71,15 +73,17 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 3rem;
+    
 }
 
 nav a {
     text-decoration: none;
     color: #333;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s;
+    
 }
 
 nav a:hover, nav a.active {
@@ -91,11 +95,17 @@ nav a:hover, nav a.active {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
 }
 
 .nav-links {
   display: flex;
   gap: 2.5rem;
+  position: relative;
+  top: -10px;
+  
 }
 
 
