@@ -68,10 +68,17 @@ links.forEach(link => {
   const lightbox = document.getElementById("lightbox");
   const prevBtn = document.getElementById("lightbox-prev");
   const nextBtn = document.getElementById("lightbox-next");
+  const closeBtn = document.getElementById("lightbox-close");
 
   if (images.length > 0 && lightbox && prevBtn && nextBtn) {
 
     let currentIndex = 0;
+
+     closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        lightbox.classList.remove("show");
+    });
+
 
     function showImage(index) {
       const img = images[index];
