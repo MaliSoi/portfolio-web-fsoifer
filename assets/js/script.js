@@ -1,27 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ==================== PORTFOLIO FILTER ==================== */
-  const categoryBtns = document.querySelectorAll('.category-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+const categoryBtns = document.querySelectorAll('.category-btn');
+const projectCards = document.querySelectorAll('.project-card');
 
-  if (categoryBtns.length > 0) {
+if (categoryBtns.length > 0) {
+
+  function applyFilter(category) {
+
     categoryBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const category = btn.dataset.category;
+      btn.classList.toggle('active', btn.dataset.category === category);
+    });
 
-        categoryBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        projectCards.forEach(card => {
-          if (category === 'all' || card.dataset.category === category) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
+    projectCards.forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
     });
   }
+
+  categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+      const category = btn.dataset.category;
+
+      // Guardar el filtro elegido
+      sessionStorage.setItem('portfolioFilter', category);
+
+      // Aplicar filtro
+      applyFilter(category);
+    });
+  });
+
+  // Recuperar el último filtro elegido
+  const savedFilter = sessionStorage.getItem('portfolioFilter') || 'all';
+
+  applyFilter(savedFilter);
+}
 
   /* ==================== CONTACT FORM ==================== */
   const contactForm = document.querySelector('.contact-form');
